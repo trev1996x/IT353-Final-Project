@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Disneyland Photos</title>
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="Styles.css">
+    <link href="Main.html">
+    <link href="MealRecipes.html">
+    <link href="BakedGoods.html">
+    <link href="DisneyPhotos.html">
+    <link href="CaliforniaPhotos.html">
+    <script src="https://api.disneyapi.dev/character/" async></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="Index.html"><img src="Images/favicon.png" width="60px" height="60px" alt="favicon"
+                    style="padding: 3px;"></a>Disneyland Photos</h1>
+    </header>
+
+    <main>
+        <nav class="nav-menu">
+            <button type="button" id="home"><a href="Index.html" style="color: #404040;">Home</a></button>
+            <button type="button" id="meal-recipes"><a href="MealRecipes.html" style="color: #404040;">Meal Recipes</a></button>
+            <button type="button" id="baked-goods"><a href="BakedGoods.html" style="color: #404040;">Baked Goods</a></button>
+            <button type="button" id="disney-photos"><a href="DisneyPhotos.html" style="color: #404040;">Disney Travel Photos</a></button>
+            <button type="button" id="california-photos"><a href="CaliforniaPhotos.html" style="color: #404040;">California Travel Photos</a></button>
+        </nav>
+
+        <!-- Photo blog grid layout -->
+        <div id="grid-photo">
+            <p><img src="Images/disneyland3.jpeg" alt="Shawn & I"><br>Shawn & I</p>
+            <p><img src="Images/disneyland2.jpeg" alt="Snow White Castle at Night"><br>Snow White's Castle at night decorated for the holidays.</p>
+            <p><img src="Images/disneyland1.jpeg" alt="Casa Madrigal"><br>La casa Madrigal from the movie Encanto</p>
+            <p><img src="Images/pixar_pier2.jpeg" alt="Pixar Pier"><br>Pixar Pier</p>
+            <p><img src="Images/haunted_mansion.jpeg" alt="Haunted Mansion"><br>The Haunted Mansion</p>
+            <p><img src="Images/pooh.jpeg" alt="Pooh and Tigger"><br>Pooh and Tigger</p>
+            <p><img src="Images/mirabel.jpeg" alt="Mirabel"><br>Mirabel</p>
+            <p><img src="Images/cars.jpeg" alt="Lightning McQueen"><br>Ka-chow!</p>
+            <p><img src="Images/splashmountain.jpeg" alt="Splash Mountain"><br>Splash Mountain</p>
+        </div>
+
+        <!-- Video with closed captions -->
+        <div id="video">
+            <h2 style="margin-top: 25px;">World of Color</h2>
+            <video controls>
+                <source src="Images/DCA_WorldOfColor.mp4" type="video/mp4">
+                <track label="English" kind="captions" srclang="en"/>
+            </video>
+        </div>
+
+        <!-- Form for name, with validation -->
+        <form method="POST" id="nameForm" onsubmit="validateForm()">
+            <h2>Add your name to the guest book!</h2>
+            <label for="fname">First Name: </label>
+            <input type="text" id="fname" name="fname" placeholder="First name" minlength="2" required><br>
+            <label for="lname">Last Name: </label>
+            <input type="text" id="lname" name="lname" placeholder="Last name" minlength="2" required><br>
+            <button type="reset" value="reset">Clear</button>
+            <button type="submit" value="submit">Submit</button>
+        </form>
+        <script type="text/javascript">
+            var fname = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+            function validateForm() {
+                event.preventDefault();
+                if (document.getElementById('nameForm').checkValidity()) {
+                    alert("Thank you for being our guest!")
+                    document.getElementById('nameForm').reset();
+                }
+            }
+        </script>
+
+        <!-- Hidden Mickey -->
+        <div id="hidden-mickey">
+            <a href="https://disneyland.disney.go.com" target="_blank"><img src="Images/mickey_logo.png"
+                    alt="Mickey Mouse" width="2%" height="2%"></a>
+        </div>
+
+        <footer>Created by Trevor Leamon. &copy;2023.</footer>
+    </main>
+</body>
