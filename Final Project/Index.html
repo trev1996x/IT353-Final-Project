@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Main Page</title>
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+    <link rel="stylesheet" href="Styles.css">
+    <link href="Main.html">
+    <link href="MealRecipes.html">
+    <link href="BakedGoods.html">
+    <link href="DisneyPhotos.html">
+    <link href="CaliforniaPhotos.html">
+</head>
+
+<body>
+    <!-- Page name and favicon -->
+    <header>
+        <h1><a href="Index.html"><img src="Images/favicon.png" width="60px" height="60px" alt="favicon"
+                    style="padding: 3px;"></a>Trevor Leamon</h1>
+    </header>
+
+    <main>
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <button type="button" id="home"><a href="Index.html" style="color: #404040;">Home</a></button>
+            <button type="button" id="meal-recipes"><a href="MealRecipes.html" style="color: #404040;">Meal
+                    Recipes</a></button>
+            <button type="button" id="baked-goods"><a href="BakedGoods.html" style="color: #404040;">Baked
+                    Goods</a></button>
+            <button type="button" id="disney-photos"><a href="DisneyPhotos.html" style="color: #404040;">Disney Travel
+                    Photos</a></button>
+            <button type="button" id="california-photos"><a href="CaliforniaPhotos.html"
+                    style="color: #404040;">California Travel Photos</a></button>
+        </nav>
+
+        <!-- Body content of main page -->
+        <section class="bio">
+            <img src="Images/trevor.jpeg" alt="Trevor Leamon" height="557" width="391" />
+            <p>
+                Hello and welcome! My name is Trevor Leamon. I am a Junior at Illinois State University majoring in
+                Information Systems: Web Application
+                Development. <b>Go Redbirds!</b> Ever since I was young, I have always been curious about technology -
+                which is why I picked my major.
+                After graduation, I would like to do something involving application support or development. Although
+                somtimes challenging for me, I love
+                coding and seeing all of the cool things you can make and design. In my spare time, I enjoy playing
+                board games, card games, video games, baking,
+                and cooking. I am also a big fan of aviation, travel, the beach, Disney, and animals. I have one cat at
+                home named Arla - she runs the house.
+                <br>
+                <img src="Images/Arla.jpeg" alt="Arla" height="200px" width="auto"
+                    style="border-radius: 10px; margin-left: 250px;">
+                <br>
+                <br>
+                I am best known for my baking skills. I am always trying new recipes and bringing them into work for my
+                coworkers to taste test. This site includes some of my favorite recipes that I have tried and tweaked to
+                perfection. I also have shared some of my favorite travel photos. Some from Disney, and some from my
+                recent
+                trip to California.
+            </p>
+        </section>
+
+        <section id="shibe">
+            <button id="generateButton">Click for a blessing</button>
+            <img id="shibe-image" alt="">
+
+            <script>
+                document.getElementById('generateButton').addEventListener('click', generateImage);
+
+                function generateImage() {
+                    const shibeImage = document.getElementById('shibe-image');
+                    shibeImage.style.display = 'block';
+                    const count = getRandomCount();
+                    const urls = true;
+                    const httpsUrls = true;
+
+                    fetch(`http://shibe.online/api/shibes?count=${count}&urls=${urls}&httpsUrls=${httpsUrls}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            shibeImage.src = data[0];
+                        })
+                        .catch(error => console.error('Error:', error));
+                }
+
+                function getRandomCount() {
+                    return Math.floor(Math.random() * 100) + 1;
+                }
+            </script>
+        </section>
+
+        <footer>Created by Trevor Leamon. &copy;2023.</footer>
+    </main>
+</body>
+
+</html>

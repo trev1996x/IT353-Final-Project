@@ -1,0 +1,171 @@
+/* Website theme colors:
+Background -> Dark Green: #0F3316
+Header fonts -> Pink: #FF70D1
+Sub heads and P text -> Turqoise: #40E0D0
+Accent color, buttons -> Goldenrod: #DAA520
+Alt accent -> Charcoal Gray: #404040
+*/
+h1 {
+    font-family: Midgeto DEMO, Helvetica, Arial, sans-serif; 
+    color: #FF70D1;
+    font-size: 80px;
+    padding: 5px;
+    margin: 3px;
+}
+h2 {
+    font-family: Pacifico, Helvetica, Arial, sans-serif;
+    color: #FF70D1;
+    font-size: 32px;
+    padding: 5px;
+    margin: 3px;
+}
+h3 {
+    font-family: Geneva, Helvetica, Arial, Helvetica, sans-serif;
+    color: #40E0D0;
+    font-size: 28px;
+    padding: 3px;
+    margin: 3px;
+}
+footer {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 10px;
+}
+
+.nav-menu {
+    padding: 5px;
+    margin: 0px;
+}
+
+button {
+    background-color: #DAA520;
+    font-family: Pacifico, Helvetica, Arial, sans-serif; 
+    font-size: 20px;
+    color: #404040;
+    border-radius: 13px;
+    border-color: #404040;
+    padding: 5px;
+    margin: 3px;
+}
+button:hover {
+    background-color: #40E0D0;
+}
+
+body {
+    background-color: #0F3316;
+    font-family: Geneva, Helvetica, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 5px 30px 10px 30px;
+    color: #40E0D0;
+}
+
+p {
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Formats the bio on the home page */
+.bio {
+    position: relative;
+    display: flex;
+    align-items: left;
+    padding: 5px;
+    margin: 5px;
+}
+.bio > img {
+    box-shadow: 4px 4px black;
+    border-radius: 20px;
+}
+.bio > p {
+    margin-left: 40px;
+    text-align: left;
+    text-wrap: wrap;
+    border: #40E0D0;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+/* Displays the blog photos into a 3 column grid with the caption text center aligned */
+#grid-photo {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    font-family: Geneva, Helvetica, Arial, sans-serif;
+    text-align: center;
+    align-items: center;
+}
+#grid-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px black;
+}
+
+/* Table layout for each recipe card */
+#recipe {
+    border: 2px solid #40E0D0;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 40px auto auto auto;
+    background-color: #404040;
+    box-shadow: 4px 4px black;
+    text-align: top;
+    justify-content: left;
+}
+#recipe img {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px black;
+}
+#recipe tr {
+    text-align: top;
+    justify-content: left;
+}
+
+/* Styles for the name form on Disneyland Photos page */
+#nameForm {
+    border: solid #40E0D0 3px;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 5px;
+}
+input[type="text"] {
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    font: 18px;
+    font-family: Geneva, Verdana, Arial, sans-serif;
+}
+
+/* Sets video size and centers it to page */
+video {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 800px;
+}
+#video {
+    margin: 25px 5px 10px 5px;
+    text-align: center;
+}
+
+/* Hidden Mickey */
+#hidden-mickey {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Shiba Inu generator API */
+#shibe {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+#shibe-image {
+    border-radius: 20px;
+    max-width: 20%;
+    max-height: auto;
+}
